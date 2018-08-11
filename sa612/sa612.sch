@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:sa612-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -118,10 +119,10 @@ Wire Wire Line
 Wire Wire Line
 	3500 2950 2350 2950
 $Comp
-L Connector_Generic:Conn_01x03 J3
+L Connector_Generic:Conn_01x03 IF1
 U 1 1 5B6B9B1D
 P 3850 1750
-F 0 "J3" H 3929 1792 50  0000 L CNN
+F 0 "IF1" H 3929 1792 50  0000 L CNN
 F 1 "OSC_IN" H 3929 1701 50  0000 L CNN
 F 2 "x-uhf:X-UHF_Interconnect" H 3850 1750 50  0001 C CNN
 F 3 "~" H 3850 1750 50  0001 C CNN
@@ -129,11 +130,11 @@ F 3 "~" H 3850 1750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x03 J4
+L Connector_Generic:Conn_01x03 OUT1
 U 1 1 5B6B9B76
 P 3850 2400
-F 0 "J4" H 3929 2442 50  0000 L CNN
-F 1 "IF_OUT" H 3929 2351 50  0000 L CNN
+F 0 "OUT1" H 3929 2442 50  0000 L CNN
+F 1 "RF_OUT" H 3929 2351 50  0000 L CNN
 F 2 "x-uhf:X-UHF_Interconnect" H 3850 2400 50  0001 C CNN
 F 3 "~" H 3850 2400 50  0001 C CNN
 	1    3850 2400
@@ -145,10 +146,10 @@ Wire Wire Line
 	3500 2300 3500 2500
 Connection ~ 3500 2500
 $Comp
-L Connector_Generic:Conn_01x03 J1
+L Connector_Generic:Conn_01x03 IN1
 U 1 1 5B6B9D7C
 P 700 2200
-F 0 "J1" H 620 1875 50  0000 C CNN
+F 0 "IN1" H 620 1875 50  0000 C CNN
 F 1 "RF_IN" H 620 1966 50  0000 C CNN
 F 2 "x-uhf:X-UHF_Interconnect" H 700 2200 50  0001 C CNN
 F 3 "~" H 700 2200 50  0001 C CNN
@@ -207,17 +208,6 @@ Wire Wire Line
 Wire Wire Line
 	2350 1250 2350 1400
 Connection ~ 2350 1400
-$Comp
-L Regulator_Linear:MCP1700-5002E_SOT23 U2
-U 1 1 5B6BE2D2
-P 2950 1250
-F 0 "U2" H 2950 1492 50  0000 C CNN
-F 1 "MCP1700-5002E_SOT23" H 2950 1401 50  0000 C CNN
-F 2 "TO_SOT_Packages_SMD:SOT-23" H 2950 1475 50  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001826C.pdf" H 2950 1250 50  0001 C CNN
-	1    2950 1250
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	2350 1250 2650 1250
 $Comp
@@ -263,4 +253,15 @@ Wire Wire Line
 Connection ~ 3350 1650
 Wire Wire Line
 	3350 1650 3500 1650
+$Comp
+L Regulator_Linear:LD1117S50TR_SOT223 U2
+U 1 1 5B721F22
+P 2950 1250
+F 0 "U2" H 2950 1492 50  0000 C CNN
+F 1 "LD1117S50TR_SOT223" H 2950 1401 50  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-223-3_TabPin2" H 2950 1450 50  0001 C CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000544.pdf" H 3050 1000 50  0001 C CNN
+	1    2950 1250
+	-1   0    0    -1  
+$EndComp
 $EndSCHEMATC
