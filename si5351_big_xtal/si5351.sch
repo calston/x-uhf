@@ -236,8 +236,6 @@ Connection ~ 6050 2700
 Wire Wire Line
 	6050 2700 6050 2750
 Wire Wire Line
-	5300 2700 3300 2700
-Wire Wire Line
 	1900 2700 1900 2150
 Connection ~ 5300 2700
 $Comp
@@ -319,31 +317,10 @@ Wire Wire Line
 Connection ~ 2850 1850
 Wire Wire Line
 	2850 1850 2600 1850
-$Comp
-L Device:Crystal_GND24 Y1
-U 1 1 5B6E2941
-P 3100 2100
-F 0 "Y1" V 3054 2341 50  0000 L CNN
-F 1 "Crystal_GND24" V 3145 2341 50  0000 L CNN
-F 2 "Crystals:Crystal_SMD_Abracon_ABM8G-4pin_3.2x2.5mm" H 3100 2100 50  0001 C CNN
-F 3 "~" H 3100 2100 50  0001 C CNN
-	1    3100 2100
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	3350 2050 3350 2250
 Wire Wire Line
 	3100 2250 3350 2250
-Wire Wire Line
-	3300 2100 3300 2700
-Connection ~ 3300 2700
-Wire Wire Line
-	3300 2700 2900 2700
-Wire Wire Line
-	2900 2100 2900 2700
-Connection ~ 2900 2700
-Wire Wire Line
-	2900 2700 1900 2700
 Wire Wire Line
 	4900 2550 4200 2550
 Wire Wire Line
@@ -355,5 +332,18 @@ Wire Wire Line
 Connection ~ 4900 2550
 Connection ~ 3400 1850
 Wire Wire Line
-	3400 1850 2850 1850
+	2850 1850 3400 1850
+Wire Wire Line
+	1900 2700 5300 2700
+$Comp
+L Device:Crystal Y1
+U 1 1 5B776FE1
+P 3100 2100
+F 0 "Y1" V 3054 2231 50  0000 L CNN
+F 1 "Crystal" V 3145 2231 50  0000 L CNN
+F 2 "Crystals:Crystal_SMD_HC49-SD" H 3100 2100 50  0001 C CNN
+F 3 "~" H 3100 2100 50  0001 C CNN
+	1    3100 2100
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
