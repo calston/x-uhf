@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:bfr93-amplifier-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -260,6 +261,24 @@ Connection ~ 2800 1450
 Wire Wire Line
 	3250 1250 3650 1250
 Wire Wire Line
-	3650 1250 3650 1850
+	3650 1250 3650 1450
 Connection ~ 3650 1850
+$Comp
+L Device:C C?
+U 1 1 5B82EA62
+P 3200 1450
+F 0 "C?" V 2948 1450 50  0000 C CNN
+F 1 "10u" V 3039 1450 50  0000 C CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 3238 1300 50  0001 C CNN
+F 3 "~" H 3200 1450 50  0001 C CNN
+	1    3200 1450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3050 1450 2800 1450
+Wire Wire Line
+	3350 1450 3650 1450
+Connection ~ 3650 1450
+Wire Wire Line
+	3650 1450 3650 1850
 $EndSCHEMATC
